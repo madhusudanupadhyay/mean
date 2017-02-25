@@ -9,5 +9,5 @@ var UserSchema = new Schema({
     password: String,
     phoneNumber: Number
 });
-
+// This User instance will be used to create a Schema for the User
 mongoose.model('User', UserSchema);
