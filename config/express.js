@@ -27,10 +27,22 @@ module.exports = function() {
         secret: config.sessionSecret
     }));
 
+    // Setting view engine
+    // app.set('views', './app/views');
+    // app.set('view engine', 'html');
 
-    app.set('views', './app/views');
-    app.set('view engine', 'ejs');
 
+    // Trying to render html file.
+    app.get('/', function(req, res) {
+
+        res.sendFile('/Users/beast/mean/app/views/');
+
+    });
+
+    // // This will be the enum opertor that will help the user choose from within the specified list of credentials available in the databse
+    // app.get('/error.html', function(req, res) {
+    //     res.send('/user/beast/mean/app/views');
+    // });
 
     require('../app/routes/index.server.routes.js')(app);
     require('../app/routes/users.server.routes')(app);
