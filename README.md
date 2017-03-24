@@ -3,7 +3,9 @@
 ***Work in progress***
 
 `git clone: https://github.com/madhusudanupadhyay/mean.git`
+
 `npm install`
+
 `npm start`
 
 
