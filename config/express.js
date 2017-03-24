@@ -4,7 +4,8 @@ var config = require('./config'),
     compress = require('compression'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
-    session = require('express-session');
+    session = require('express-session'),
+    passport = require('passport');
 
 module.exports = function() {
     var app = express();
@@ -38,6 +39,9 @@ module.exports = function() {
         res.sendFile('/Users/beast/mean/app/views/');
 
     });
+
+    app.use(passport.initialize());
+    app.use(passport.session());
 
     // // This will be the enum opertor that will help the user choose from within the specified list of credentials available in the databse
     // app.get('/error.html', function(req, res) {
